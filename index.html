@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Input Error Testing - Netlify Functions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen flex items-center justify-center p-8">
+    <div class="max-w-4xl w-full">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                JSON Input Error Test Suite
+            </h1>
+            <p class="text-center text-gray-600 mb-12">
+                Test scenarios for "Unexpected end of JSON input" error in Netlify Functions
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a href="https://unexpected-json-error-test.netlify.app/.netlify/functions/simulate-fetch-data" 
+                   target="_blank"
+                   class="group relative overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                    <div class="relative z-10">
+                        <svg class="w-8 h-8 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">Fetch Data</h3>
+                        <p class="text-blue-100 text-sm">Test JSON data response</p>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+
+                <a href="https://unexpected-json-error-test.netlify.app/.netlify/functions/simulate-fetch-html" 
+                   target="_blank"
+                   class="group relative overflow-hidden rounded-xl bg-gradient-to-r from-green-500 to-green-600 p-6 text-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                    <div class="relative z-10">
+                        <svg class="w-8 h-8 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">Fetch HTML</h3>
+                        <p class="text-green-100 text-sm">Test HTML response</p>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+
+                <a href="https://unexpected-json-error-test.netlify.app/.netlify/functions/simulate-fetch-null" 
+                   target="_blank"
+                   class="group relative overflow-hidden rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 p-6 text-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                    <div class="relative z-10">
+                        <svg class="w-8 h-8 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">Fetch Null</h3>
+                        <p class="text-amber-100 text-sm">Test null value response</p>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-amber-600 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+
+                <a href="https://unexpected-json-error-test.netlify.app/.netlify/functions/simulate-fetch-string" 
+                   target="_blank"
+                   class="group relative overflow-hidden rounded-xl bg-gradient-to-r from-purple-500 to-purple-600 p-6 text-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                    <div class="relative z-10">
+                        <svg class="w-8 h-8 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">Fetch String</h3>
+                        <p class="text-purple-100 text-sm">Test string response</p>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+
+                <a href="https://unexpected-json-error-test.netlify.app/.netlify/functions/simulate-fetch-undefined" 
+                   target="_blank"
+                   class="group relative overflow-hidden rounded-xl bg-gradient-to-r from-red-500 to-red-600 p-6 text-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 md:col-span-2">
+                    <div class="relative z-10">
+                        <svg class="w-8 h-8 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">Fetch Undefined</h3>
+                        <p class="text-red-100 text-sm">Test undefined response</p>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+            </div>
+
+            <div class="mt-12 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <h2 class="text-lg font-semibold text-gray-800 mb-2">About This Test Suite</h2>
+                <p class="text-gray-600 text-sm">
+                    This test suite simulates different scenarios that may trigger "Unexpected end of JSON input" errors in Netlify serverless functions. Each endpoint tests different response types including JSON data, HTML, null values, strings, and undefined responses.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
