@@ -1,18 +1,11 @@
 exports.handler = async () => {
-  try {
-    // Use relative path for same-project function call
-    const response = await fetch("/.netlify/functions/return-data");
+  // fetch from return-data function
+  const response = await fetch("/.netlify/functions/return-data");
 
-    const data = await response.json(); // Will throw if response is empty
+  const data = await response.json(); // Will throw if response is not valid JSON
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ data }),
-    };
-  } catch (err) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: err.message }),
-    };
-  }
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ data }),
+  };
 };

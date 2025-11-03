@@ -2,7 +2,7 @@ exports.handler = async () => {
   // fetch from return-null function
   const response = await fetch("/.netlify/functions/return-null");
 
-  const data = await response.json(); // Will throw if response is empty
+  const data = await response.json(); // Will throw if response is NULL
 
   return {
     statusCode: 200,
